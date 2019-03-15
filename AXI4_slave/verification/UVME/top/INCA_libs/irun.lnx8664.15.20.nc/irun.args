@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-access
++rwc
+-f
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f
+-coverage
+all
+-covdut
+top
+-covworkdir
+/cov_work
+-covoverwrite
+-covfile
+./cov_files/cov_cmd.cf
+-uvmhome
+CDNS-1.1d
++UVM_TESTNAME=dma_start_stop_test

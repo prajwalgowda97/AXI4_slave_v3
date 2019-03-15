@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-access
++rwc
+-f
+compile_list.f
+-uvmhome
+CDNS-1.1d
++UVM_TESTNAME=axi_multiple_outstanding_address_test

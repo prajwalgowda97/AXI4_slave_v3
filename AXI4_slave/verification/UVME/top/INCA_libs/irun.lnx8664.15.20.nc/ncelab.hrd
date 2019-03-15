@@ -1,0 +1,12 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-ACCESS
++rwc
+-COVERAGE
+all
+-COVDUT
+top
+-COVFILE
+./cov_files/cov_cmd.cf

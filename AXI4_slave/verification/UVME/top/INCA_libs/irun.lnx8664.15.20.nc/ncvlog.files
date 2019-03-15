@@ -1,0 +1,15 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_master.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_slave.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_lite_top.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/control_reg.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_buffer.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_FSM_ctrl.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_TOP.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/GP_DMA_TOP.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/agent/dma_interface.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/uvm_pkg/pkg.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/top/top.sv

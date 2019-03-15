@@ -1,0 +1,9 @@
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/1.AXI4_Slave_Write_Address.sv
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/2.AXI4_Slave_Write_Data.sv
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/3.AXI4_Slave_Write_Response.sv
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/4.AXI4_Slave_Read_Address.sv
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/5.AXI4_Slave_Read_Data.sv
+./../../axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv
+./../UVME/uvm_pkg/test_pkg.sv
+./../UVME/top/axi_top.sv
+./../UVME/top/axi_interface.sv
