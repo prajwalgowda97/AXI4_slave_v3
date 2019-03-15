@@ -27,10 +27,10 @@ class axi_env extends uvm_env;
 
   //connect phase
   function void connect_phase(uvm_phase phase);
-   agent_inst.mon_inst.analysis_port.connect(sb.wr_export);
-   agent_inst.mon_inst.analysis_port.connect(sb.rd_export);   
+    agent_inst.mon_inst.wr_analysis_port.connect(sb.wr_export);
+    agent_inst.mon_inst.rd_analysis_port.connect(sb.rd_export);
+
    `uvm_info("env_class", "Inside connect Phase!", UVM_HIGH)
 
   endfunction 
 endclass
-

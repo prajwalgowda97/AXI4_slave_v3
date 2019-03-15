@@ -62,11 +62,11 @@ class axi_scoreboard extends uvm_scoreboard;
             wr_queue.push_back(trans);
 
             `uvm_info("SCOREBOARD", 
-                $sformatf("WRITE Data: AWADDR=0x%0h, AWID=0x%0h, AWLEN=%0h, AWSIZE=%0d, AWBURST=%0d", 
+                $sformatf("WRITE Address: AWADDR=0x%0h, AWID=0x%0h, AWLEN=%0h, AWSIZE=%0d, AWBURST=%0d", 
                 t.AWADDR, t.AWID, t.AWLEN, t.AWSIZE, t.AWBURST), UVM_MEDIUM)
 
             `uvm_info("SCOREBOARD", 
-                $sformatf("WRITE Address: WDATA=0x%0p, WSTRB=0x%0h, WLAST=%0d", 
+                $sformatf("WRITE Data: WDATA=0x%0p, WSTRB=0x%0h, WLAST=%0d", 
                 t.WDATA, t.WSTRB, t.WLAST), UVM_MEDIUM)
             
             `uvm_info("SCOREBOARD", 
@@ -100,7 +100,7 @@ class axi_scoreboard extends uvm_scoreboard;
     end
     endfunction
 
-    function void check_phase(uvm_phase phase);
+/*    function void check_phase(uvm_phase phase);
         axi_trans_t wr_trans, rd_trans, ref_trans;
 
         while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
@@ -135,6 +135,90 @@ class axi_scoreboard extends uvm_scoreboard;
                     wr_trans.addr, rd_trans.addr, wr_trans.id, rd_trans.id))
             end
         end
-    endfunction
-endclass
+    endfunction */
+function void check_phase(uvm_phase phase);
+    axi_trans_t wr_trans, rd_trans;
 
+    while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
+        wr_trans = wr_queue.pop_front();
+        rd_trans = rd_queue.pop_front();
+
+        // ---- Address & ID Check ----
+        if ((wr_trans.addr == rd_trans.addr) && (wr_trans.id == rd_trans.id)) begin
+            `uvm_info("CHECKER - AW/AR_CHANNEL", $sformatf(
+                "PASS: ADDR=0x%0h, ID=0x%0h", wr_trans.addr, wr_trans.id), UVM_MEDIUM)
+
+            // ---- LEN, SIZE, BURST Comparison ----
+            if ((wr_trans.len == rd_trans.len) &&
+                (wr_trans.size == rd_trans.size) &&
+                (wr_trans.burst == rd_trans.burst)) begin
+
+                `uvm_info("CHECKER - AW/AR_CHANNEL", $sformatf(
+                    "PASS: LEN=%0d, SIZE=%0d, BURST=%0d", wr_trans.len, wr_trans.size, wr_trans.burst), UVM_MEDIUM)
+
+            end else begin
+                if (wr_trans.len != rd_trans.len)
+                    `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
+                        "LEN MISMATCH: WR_LEN=%0d, RD_LEN=%0d", wr_trans.len, rd_trans.len))
+                if (wr_trans.size != rd_trans.size)
+                    `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
+                        "SIZE MISMATCH: WR_SIZE=%0d, RD_SIZE=%0d", wr_trans.size, rd_trans.size))
+                if (wr_trans.burst != rd_trans.burst)
+                    `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
+                        "BURST MISMATCH: WR_BURST=%0d, RD_BURST=%0d", wr_trans.burst, rd_trans.burst))
+            end
+
+            // ---- W vs R Data Check ----
+            if (wr_trans.data.size() == rd_trans.data.size()) begin
+                bit all_match = 1;
+                foreach (wr_trans.data[i]) begin
+                    if (wr_trans.data[i] !== rd_trans.data[i]) begin
+                        all_match = 0;
+                        `uvm_error("CHECKER - W/R_CHANNEL", $sformatf(
+                            "DATA MISMATCH: IDX=%0d, WR_DATA=0x%0h, RD_DATA=0x%0h", 
+                            i, wr_trans.data[i], rd_trans.data[i]))
+                    end
+                end
+                if (all_match)
+                    `uvm_info("CHECKER - W/R_CHANNEL", "WRITE/READ DATA MATCH: PASS", UVM_MEDIUM)
+            end else begin
+                `uvm_error("CHECKER - W/R_CHANNEL", $sformatf(
+                    "DATA LENGTH MISMATCH: WR=%0d, RD=%0d", 
+                    wr_trans.data.size(), rd_trans.data.size()))
+            end
+
+            // ---- B Channel Check ----
+            if (wr_trans.bvalid && wr_trans.bready) begin
+                if (wr_trans.resp == 2'b00) begin
+                    `uvm_info("CHECKER - B_CHANNEL", $sformatf(
+                        "PASS: BID=0x%0h, BRESP=0x%0h", wr_trans.bid, wr_trans.resp), UVM_MEDIUM)
+                end else begin
+                    `uvm_error("CHECKER - B_CHANNEL", $sformatf(
+                        "FAIL: BRESP=0x%0h (non-OKAY)", wr_trans.resp))
+                end
+            end else begin
+                `uvm_error("CHECKER - B_CHANNEL", "BVALID or BREADY not asserted during response")
+            end
+
+            // ---- R Channel Check ----
+            if (rd_trans.valid && rd_trans.ready && rd_trans.last) begin
+                if (rd_trans.resp == 2'b00) begin
+                    `uvm_info("CHECKER - R_CHANNEL", $sformatf(
+                        "PASS: RRESP=0x%0h, RLAST=0x%0d", rd_trans.resp, rd_trans.last), UVM_MEDIUM)
+                end else begin
+                    `uvm_error("CHECKER - R_CHANNEL", $sformatf(
+                        "FAIL: RRESP=0x%0h (non-OKAY)", rd_trans.resp))
+                end
+            end else begin
+                `uvm_error("CHECKER - R_CHANNEL", "RVALID, RREADY, or RLAST not asserted")
+            end
+
+        end else begin
+            `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
+                "ADDR/ID MISMATCH: WR_ADDR=0x%0h, RD_ADDR=0x%0h, WR_ID=0x%0h, RD_ID=0x%0h", 
+                wr_trans.addr, rd_trans.addr, wr_trans.id, rd_trans.id))
+        end
+    end
+endfunction
+
+endclass

@@ -65,7 +65,7 @@ if (scenario == 27)
             seq_item_inst.wr_rd     == 1'b1;
             seq_item_inst.AWVALID   == 1'b1;
             seq_item_inst.WVALID    == 1'b1;
-            seq_item_inst.BREADY    == 1'b0;
+            seq_item_inst.BREADY    == 1'b1;
             seq_item_inst.AWADDR inside {[32'h0000_0000 : 32'hFFFF_FFFF]}; 
             seq_item_inst.WDATA[0]  inside {[32'h0000_0000 : 32'hFFFF_FFFF]};
             seq_item_inst.AWID   inside {[4'h0 : 4'hF]};
