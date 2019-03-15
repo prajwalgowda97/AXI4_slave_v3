@@ -1,0 +1,37 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-UVMNOSINGLESTEP
+-define
+UVM_PLI
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_master.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_slave.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_lite_top.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/control_reg.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_buffer.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_FSM_ctrl.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_TOP.sv
+/home/vv2trainee39/sunil/GP_DMA/RTL/GP_DMA_TOP.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/agent/dma_interface.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/uvm_pkg/pkg.sv
+/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/top/top.sv
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-I_INCDIR
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src
+-DEFINE
+USE_PARAMETERIZED_WRAPPER
+-I_INCDIR
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND
+-ENABLEOIGW

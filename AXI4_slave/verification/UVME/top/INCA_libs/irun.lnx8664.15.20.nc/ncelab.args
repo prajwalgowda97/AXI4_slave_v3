@@ -1,0 +1,26 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-loadpli
+/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/additions/sv/lib/64bit/libuvmpli.so:uvm_pli_boot
+-ACCESS
++rwc
+-COVERAGE
+all
+-COVDUT
+top
+-COVFILE
+./cov_files/cov_cmd.cf
++UVM_TESTNAME=dma_start_stop_test
+-MESSAGES
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-WORK
+worklib
+-HASXLMODE

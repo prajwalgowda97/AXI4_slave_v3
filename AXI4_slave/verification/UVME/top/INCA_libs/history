@@ -1,0 +1,11 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(14Mar2019:21:50:32):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s2::(14Mar2019:21:52:42):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s3::(14Mar2019:21:53:44):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s4::(14Mar2019:21:54:36):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s5::(14Mar2019:21:56:06):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s6::(14Mar2019:21:58:40):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )
+s7::(14Mar2019:21:58:59):( irun -access +rwc -f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f -coverage all -covdut top -covworkdir /cov_work -covoverwrite -covfile ./cov_files/cov_cmd.cf -uvmhome CDNS-1.1d +UVM_TESTNAME=dma_start_stop_test )

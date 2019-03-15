@@ -1,0 +1,28 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 14, 2019 at 21:58:59 IST
+irun
+	-access +rwc
+	-f /home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/compile.f
+		/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_master.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_slave.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/axi4_lite_top.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/control_reg.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_buffer.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_FSM_ctrl.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/DMA_TOP.sv
+		/home/vv2trainee39/sunil/GP_DMA/RTL/GP_DMA_TOP.sv
+		/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/agent/dma_interface.sv
+		/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/uvm_pkg/pkg.sv
+		/home/vv2trainee39/sunil/GP_DMA/VERIFICATION/UVME/top/top.sv
+	-coverage all
+	-covdut top
+	-covworkdir /cov_work
+	-covoverwrite
+	-covfile ./cov_files/cov_cmd.cf
+	-uvmhome CDNS-1.1d
+	+UVM_TESTNAME=dma_start_stop_test
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+ncelab: *E,ICFNR: Cannot open instrumentation configuration file ./cov_files/cov_cmd.cf.
+irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 14, 2019 at 21:58:59 IST  (total: 00:00:00)
