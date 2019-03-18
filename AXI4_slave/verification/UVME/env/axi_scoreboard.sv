@@ -99,13 +99,8 @@ class axi_scoreboard extends uvm_scoreboard;
 
     end
     endfunction
-<<<<<<< HEAD
 
  function void check_phase(uvm_phase phase);
-=======
-    
-function void check_phase(uvm_phase phase);
->>>>>>> 0484b4da29836193f05f2e81c6fa631a6fffba51
     axi_trans_t wr_trans, rd_trans;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
@@ -115,7 +110,7 @@ function void check_phase(uvm_phase phase);
         // ---- Address & ID Check ----
         if ((wr_trans.addr == rd_trans.addr) && (wr_trans.id == rd_trans.id)) begin
             `uvm_info("CHECKER - AW/AR_CHANNEL", $sformatf(
-                "PASS: ADDR=0x%0h, ID=0x%0h", wr_trans.addr, wr_trans.id), UVM_MEDIUM)
+                "PASS: AWADDR=0x%0h, AWID=0x%0h, ARADDR=0x%0h, ARID=0x%0h", wr_trans.addr, wr_trans.id, rd_trans.addr, rd_trans.id), UVM_MEDIUM)
 
             // ---- LEN, SIZE, BURST Comparison ----
             if ((wr_trans.len == rd_trans.len) &&
@@ -123,18 +118,18 @@ function void check_phase(uvm_phase phase);
                 (wr_trans.burst == rd_trans.burst)) begin
 
                 `uvm_info("CHECKER - AW/AR_CHANNEL", $sformatf(
-                    "PASS: LEN=%0d, SIZE=%0d, BURST=%0d", wr_trans.len, wr_trans.size, wr_trans.burst), UVM_MEDIUM)
+                    "PASS: AWLEN=%0d, AWSIZE=%0d, AWBURST=%0d, ARLEN=%0d, ARSIZE=%0d, ARBURST=%0d", wr_trans.len, wr_trans.size, wr_trans.burst, rd_trans.len, rd_trans.size, rd_trans.burst), UVM_MEDIUM)
 
             end else begin
                 if (wr_trans.len != rd_trans.len)
                     `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
-                        "LEN MISMATCH: WR_LEN=%0d, RD_LEN=%0d", wr_trans.len, rd_trans.len))
+                        "LEN MISMATCH: AWLEN=%0d, ARLEN=%0d", wr_trans.len, rd_trans.len))
                 if (wr_trans.size != rd_trans.size)
                     `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
-                        "SIZE MISMATCH: WR_SIZE=%0d, RD_SIZE=%0d", wr_trans.size, rd_trans.size))
+                        "SIZE MISMATCH: AWSIZE=%0d, ARSIZE=%0d", wr_trans.size, rd_trans.size))
                 if (wr_trans.burst != rd_trans.burst)
                     `uvm_error("CHECKER - AW/AR_CHANNEL", $sformatf(
-                        "BURST MISMATCH: WR_BURST=%0d, RD_BURST=%0d", wr_trans.burst, rd_trans.burst))
+                        "BURST MISMATCH: AWBURST=%0d, ARBURST=%0d", wr_trans.burst, rd_trans.burst))
             end
 
             // ---- W vs R Data Check ----
@@ -144,17 +139,18 @@ function void check_phase(uvm_phase phase);
                     if (wr_trans.data[i] !== rd_trans.data[i]) begin
                         all_match = 0;
                         `uvm_error("CHECKER - W/R_CHANNEL", $sformatf(
-                            "DATA MISMATCH: IDX=%0d, WR_DATA=0x%0h, RD_DATA=0x%0h", 
-                            i, wr_trans.data[i], rd_trans.data[i]))
+                            "DATA MISMATCH: AWID=%0d, WDATA=0x%0h, ARID=%0d, RDATA=0x%0h", 
+                            wr_trans.id[i], rd_trans.id[i], wr_trans.data[i], rd_trans.data[i]))
                     end
                 end
+                
                 if (all_match)
                     `uvm_info("CHECKER - W/R_CHANNEL", "WRITE/READ DATA MATCH: PASS", UVM_MEDIUM)
             end else begin
                 `uvm_error("CHECKER - W/R_CHANNEL", $sformatf(
-                    "DATA LENGTH MISMATCH: WR=%0d, RD=%0d", 
-                    wr_trans.data.size(), rd_trans.data.size()))
-            end
+                    "W&R DATA MISMATCH: AWADDR=0x%0h, ARADDR=0x%0h, AWID=0x%0h, ARID=0x%0h, AWLEN=%0d, ARLEN=%0d, AWSIZE=%0d, ARSIZE=%0d, AWBURST=%0d, ARBURST=%0d, WDATA.size=%0d, RDATA.size=%0d, WDATA=0x%p, RDATA=0x%p", wr_trans.addr, rd_trans.addr, wr_trans.id, rd_trans.id, wr_trans.len, rd_trans.len, wr_trans.size, rd_trans.size, wr_trans.burst, rd_trans.burst, wr_trans.data.size(), rd_trans.data.size(), rd_trans.id, rd_trans.data
+                    ))
+            end 
 
             // ---- B Channel Check ----
             if (wr_trans.bvalid && wr_trans.bready) begin
