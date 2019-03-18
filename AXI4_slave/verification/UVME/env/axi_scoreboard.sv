@@ -100,7 +100,6 @@ class axi_scoreboard extends uvm_scoreboard;
     end
     endfunction
     
- //Concurrent Write & Read Operation
  function void check_phase(uvm_phase phase);
     
     axi_trans_t wr_trans, rd_trans;
@@ -220,63 +219,63 @@ function void check_handshake_phase();
     end
 endfunction
 
-function void check_write_operation();
+function void check_writeeration();
     foreach (wr_queue[i]) begin
         axi_trans_t wr = wr_queue[i];
 
         // Address phase handshake
         if (!wr.valid || !wr.ready)
-            `uvm_error("WRITE_OP", "AWVALID or AWREADY not asserted during address phase")
+            `uvm_error("WRITE", "AWVALID or AWREADY not asserted during address phase")
         else
-            `uvm_info("WRITE_OP", "Address phase handshake PASSED", UVM_LOW)
+            `uvm_info("WRITE", "Address phase handshake PASSED", UVM_LOW)
 
         // Data beat count check
         if (wr.data.size() != wr.len + 1)
-            `uvm_error("WRITE_OP", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", wr.len + 1, wr.data.size()))
+            `uvm_error("WRITE", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", wr.len + 1, wr.data.size()))
         else
-            `uvm_info("WRITE_OP", $sformatf("Data beat count PASSED: %0d beats", wr.data.size()), UVM_LOW)
+            `uvm_info("WRITE", $sformatf("Data beat count PASSED: %0d beats", wr.data.size()), UVM_LOW)
 
         // WLAST check
         if (!wr.last)
-            `uvm_error("WRITE_OP", "WLAST not asserted on final data beat")
+            `uvm_error("WRITE", "WLAST not asserted on final data beat")
         else
-            `uvm_info("WRITE_OP", "WLAST asserted correctly", UVM_LOW)
+            `uvm_info("WRITE", "WLAST asserted correctly", UVM_LOW)
 
         // Write response handshake
         if (!(wr.bvalid && wr.bready))
-            `uvm_error("WRITE_OP", "BVALID or BREADY not asserted during response phase")
+            `uvm_error("WRITE", "BVALID or BREADY not asserted during response phase")
         else
-            `uvm_info("WRITE_OP", "Write response handshake PASSED", UVM_LOW)
+            `uvm_info("WRITE", "Write response handshake PASSED", UVM_LOW)
     end
 endfunction
 
-function void check_read_operation();
+function void check_readeration();
     foreach (rd_queue[i]) begin
         axi_trans_t rd = rd_queue[i];
 
         // Address phase handshake
         if (!rd.valid || !rd.ready)
-            `uvm_error("READ_OP", "ARVALID or ARREADY not asserted during address phase")
+            `uvm_error("READ", "ARVALID or ARREADY not asserted during address phase")
         else
-            `uvm_info("READ_OP", "Address phase handshake PASSED", UVM_LOW)
+            `uvm_info("READ", "Address phase handshake PASSED", UVM_LOW)
 
         // Data beat count check
         if (rd.data.size() != rd.len + 1)
-            `uvm_error("READ_OP", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", rd.len + 1, rd.data.size()))
+            `uvm_error("READ", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", rd.len + 1, rd.data.size()))
         else
-            `uvm_info("READ_OP", $sformatf("Data beat count PASSED: %0d beats", rd.data.size()), UVM_LOW)
+            `uvm_info("READ", $sformatf("Data beat count PASSED: %0d beats", rd.data.size()), UVM_LOW)
 
         // RLAST check
         if (!rd.last)
-            `uvm_error("READ_OP", "RLAST not asserted on final read beat")
+            `uvm_error("READ", "RLAST not asserted on final read beat")
         else
-            `uvm_info("READ_OP", "RLAST asserted correctly", UVM_LOW)
+            `uvm_info("READ", "RLAST asserted correctly", UVM_LOW)
 
         // RRESP check
         if (rd.resp != 2'b00)
-            `uvm_error("READ_OP", $sformatf("Read response error: RRESP=0x%0h", rd.resp))
+            `uvm_error("READ", $sformatf("Read response error: RRESP=0x%0h", rd.resp))
         else
-            `uvm_info("READ_OP", "Read response (RRESP) indicates OKAY", UVM_LOW)
+            `uvm_info("READ", "Read response (RRESP) indicates OKAY", UVM_LOW)
     end
 endfunction
 
