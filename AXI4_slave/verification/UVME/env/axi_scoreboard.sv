@@ -99,8 +99,13 @@ class axi_scoreboard extends uvm_scoreboard;
 
     end
     endfunction
+<<<<<<< HEAD
 
  function void check_phase(uvm_phase phase);
+=======
+    
+function void check_phase(uvm_phase phase);
+>>>>>>> 0484b4da29836193f05f2e81c6fa631a6fffba51
     axi_trans_t wr_trans, rd_trans;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
