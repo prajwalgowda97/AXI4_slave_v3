@@ -100,43 +100,7 @@ class axi_scoreboard extends uvm_scoreboard;
     end
     endfunction
 
-/*    function void check_phase(uvm_phase phase);
-        axi_trans_t wr_trans, rd_trans, ref_trans;
-
-        while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
-            wr_trans = wr_queue.pop_front();
-            rd_trans = rd_queue.pop_front();
-
-            if (ref_queue.size() > 0) begin
-                ref_trans = ref_queue.pop_front();
-                if ((wr_trans.addr != ref_trans.addr) || (wr_trans.id != ref_trans.id)) begin
-                    `uvm_error("REF_CHECK", $sformatf("Reference Mismatch: WR_ADDR=0x%0h, REF_ADDR=0x%0h, WR_ID=0x%0h, REF_ID=0x%0h", 
-                        wr_trans.addr, ref_trans.addr, wr_trans.id, ref_trans.id))
-                end
-            end
-
-            if ((wr_trans.addr == rd_trans.addr) && (wr_trans.id == rd_trans.id)) begin
-                if (wr_trans.data.size() == rd_trans.data.size()) begin
-                    foreach (wr_trans.data[i]) begin
-                        if (wr_trans.data[i] !== rd_trans.data[i]) begin
-                            `uvm_error("SCOREBOARD", $sformatf("Data Mismatch: ADDR=0x%0h, ID=0x%0h, WR_DATA=0x%0h, RD_DATA=0x%0h", 
-                                wr_trans.addr, wr_trans.id, wr_trans.data[i], rd_trans.data[i]))
-                        end else begin
-                            `uvm_info("SCOREBOARD", $sformatf("Data Match: ADDR=0x%0h, ID=0x%0h, DATA=0x%0h", 
-                                wr_trans.addr, wr_trans.id, wr_trans.data[i]), UVM_MEDIUM)
-                        end
-                    end
-                end else begin
-                    `uvm_error("SCOREBOARD", $sformatf("Data length mismatch: WR_LEN=%0d, RD_LEN=%0d", 
-                        wr_trans.data.size(), rd_trans.data.size()))
-                end
-            end else begin
-                `uvm_error("SCOREBOARD", $sformatf("Address/ID Mismatch: WR_ADDR=0x%0h, RD_ADDR=0x%0h, WR_ID=0x%0h, RD_ID=0x%0h", 
-                    wr_trans.addr, rd_trans.addr, wr_trans.id, rd_trans.id))
-            end
-        end
-    endfunction */
-function void check_phase(uvm_phase phase);
+ function void check_phase(uvm_phase phase);
     axi_trans_t wr_trans, rd_trans;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
@@ -219,6 +183,9 @@ function void check_phase(uvm_phase phase);
                 wr_trans.addr, rd_trans.addr, wr_trans.id, rd_trans.id))
         end
     end
-endfunction
+endfunction 
 
-endclass
+
+endclass 
+
+

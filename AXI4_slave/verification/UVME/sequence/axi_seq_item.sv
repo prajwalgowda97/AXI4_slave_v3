@@ -2,6 +2,7 @@ class axi_seq_item extends uvm_sequence_item;
 int i;
 //Make the output signals as logic
       rand  logic                wr_rd     ;
+      rand  logic                handshake ;
       rand  logic                CLK       ;    //Clock Signal
       rand  logic                RST       ;    //Reset Signal
       rand  logic                AWVALID   ;    //master indicating address is valid
