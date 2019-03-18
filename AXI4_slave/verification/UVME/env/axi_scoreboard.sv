@@ -485,38 +485,37 @@ function void check_handshake_phase();
         wr = wr_queue.pop_front();
         rd = rd_queue.pop_front();
 
-        if (!(wr_queue[i].valid && wr_queue[i].ready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("WRITE address handshake failed: AWVALID=%0b AWREADY=%0b", wr_queue[i].valid, wr_queue[i].ready))
+        // WRITE Address handshake
+        if (!(wr.valid && wr.ready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("WRITE address handshake failed: AWVALID=%0b AWREADY=%0b", wr.valid, wr.ready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("WRITE address handshake PASSED: AWVALID=%0b AWREADY=%0b", wr_queue[i].valid, wr_queue[i].ready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("WRITE address handshake PASSED: AWVALID=%0b AWREADY=%0b", wr.valid, wr.ready), UVM_LOW)
         end
 
-        if (!(wr_queue[i].bvalid && wr_queue[i].bready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("B channel handshake failed: BVALID=%0b BREADY=%0b", wr_queue[i].bvalid, wr_queue[i].bready))
+        // WRITE response handshake
+        if (!(wr.bvalid && wr.bready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("B channel handshake failed: BVALID=%0b BREADY=%0b", wr.bvalid, wr.bready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("B channel handshake PASSED: BVALID=%0b BREADY=%0b", wr_queue[i].bvalid, wr_queue[i].bready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("B channel handshake PASSED: BVALID=%0b BREADY=%0b", wr.bvalid, wr.bready), UVM_LOW)
         end
-    end
 
-    foreach (rd_queue[i]) begin
-        if (!(rd_queue[i].valid && rd_queue[i].ready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("READ channel handshake failed: RVALID=%0b RREADY=%0b", rd_queue[i].valid, rd_queue[i].ready))
+        // READ data handshake
+        if (!(rd.valid && rd.ready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("READ channel handshake failed: RVALID=%0b RREADY=%0b", rd.valid, rd.ready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("READ channel handshake PASSED: RVALID=%0b RREADY=%0b", rd_queue[i].valid, rd_queue[i].ready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("READ channel handshake PASSED: RVALID=%0b RREADY=%0b", rd.valid, rd.ready), UVM_LOW)
         end
     end
 endfunction
 
-function void check_writeeration();
-   axi_trans_t wr, rd;
+function void check_write_operation();
+    axi_trans_t wr;
 
-    while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
+    while (wr_queue.size() > 0) begin
         wr = wr_queue.pop_front();
-        rd = rd_queue.pop_front();
-
 
         // Address phase handshake
-        if (!wr.valid || !wr.ready)
+        if (!(wr.valid && wr.ready))
             `uvm_error("WRITE", "AWVALID or AWREADY not asserted during address phase")
         else
             `uvm_info("WRITE", "Address phase handshake PASSED", UVM_LOW)
@@ -541,15 +540,14 @@ function void check_writeeration();
     end
 endfunction
 
-function void check_readeration();
-   axi_trans_t wr, rd;
+function void check_read_operation();
+    axi_trans_t rd;
 
-    while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
-        wr = wr_queue.pop_front();
+    while (rd_queue.size() > 0) begin
         rd = rd_queue.pop_front();
 
         // Address phase handshake
-        if (!rd.valid || !rd.ready)
+        if (!(rd.valid && rd.ready))
             `uvm_error("READ", "ARVALID or ARREADY not asserted during address phase")
         else
             `uvm_info("READ", "Address phase handshake PASSED", UVM_LOW)
