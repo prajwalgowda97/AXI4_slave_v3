@@ -384,7 +384,11 @@ class axi_scoreboard extends uvm_scoreboard;
     endfunction
     
  function void check_phase(uvm_phase phase);
-    
+  
+    check_handshake_phase();
+    check_write_operation();
+    check_read_operation();
+ 
     axi_trans_t wr_trans, rd_trans;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
@@ -478,14 +482,8 @@ class axi_scoreboard extends uvm_scoreboard;
     end
 endfunction 
 
+
 function void check_handshake_phase();
-
-super.check_phase(phase);
-
-    // Call all checkers
-    check_handshake_phase();
-    check_write_operation();
-    check_read_operation();
 
    axi_trans_t wr, rd;
 
