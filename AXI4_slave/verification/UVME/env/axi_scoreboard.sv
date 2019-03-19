@@ -384,7 +384,7 @@ class axi_scoreboard extends uvm_scoreboard;
     endfunction
     
  function void check_phase(uvm_phase phase);
-  
+
     check_handshake_phase();
     check_write_operation();
     check_read_operation();
@@ -485,61 +485,61 @@ endfunction
 
 function void check_handshake_phase();
 
-   axi_trans_t wr, rd;
+   axi_trans_t wr_trans, rd_trans;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
-        wr = wr_queue.pop_front();
-        rd = rd_queue.pop_front();
+        wr_trans = wr_queue.pop_front();
+        rd_trans = rd_queue.pop_front();
 
         // WRITE Address handshake
-        if (!(wr.valid && wr.ready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("WRITE address handshake failed: AWVALID=%0b AWREADY=%0b", wr.valid, wr.ready))
+        if (!(wr_trans.valid && wr_trans.ready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("WRITE address handshake failed: AWVALID=%0b AWREADY=%0b", wr_trans.valid, wr_trans.ready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("WRITE address handshake PASSED: AWVALID=%0b AWREADY=%0b", wr.valid, wr.ready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("WRITE address handshake PASSED: AWVALID=%0b AWREADY=%0b", wr_trans.valid, wr_trans.ready), UVM_LOW)
         end
 
         // WRITE response handshake
-        if (!(wr.bvalid && wr.bready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("B channel handshake failed: BVALID=%0b BREADY=%0b", wr.bvalid, wr.bready))
+        if (!(wr_trans.bvalid && wr_trans.bready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("B channel handshake failed: BVALID=%0b BREADY=%0b", wr_trans.bvalid, wr_trans.bready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("B channel handshake PASSED: BVALID=%0b BREADY=%0b", wr.bvalid, wr.bready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("B channel handshake PASSED: BVALID=%0b BREADY=%0b", wr_trans.bvalid, wr_trans.bready), UVM_LOW)
         end
 
         // READ data handshake
-        if (!(rd.valid && rd.ready)) begin
-            `uvm_error("HANDSHAKE_CHECK", $sformatf("READ channel handshake failed: RVALID=%0b RREADY=%0b", rd.valid, rd.ready))
+        if (!(rd_trans.valid && rd_trans.ready)) begin
+            `uvm_error("HANDSHAKE_CHECK", $sformatf("READ channel handshake failed: RVALID=%0b RREADY=%0b", rd_trans.valid, rd_trans.ready))
         end else begin
-            `uvm_info("HANDSHAKE_CHECK", $sformatf("READ channel handshake PASSED: RVALID=%0b RREADY=%0b", rd.valid, rd.ready), UVM_LOW)
+            `uvm_info("HANDSHAKE_CHECK", $sformatf("READ channel handshake PASSED: RVALID=%0b RREADY=%0b", rd_trans.valid, rd_trans.ready), UVM_LOW)
         end
     end
 endfunction
 
 function void check_write_operation();
-    axi_trans_t wr;
+    axi_trans_t wr_trans;
 
     while (wr_queue.size() > 0) begin
-        wr = wr_queue.pop_front();
+        wr_trans = wr_queue.pop_front();
 
         // Address phase handshake
-        if (!(wr.valid && wr.ready))
+        if (!(wr_trans.valid && wr_trans.ready))
             `uvm_error("WRITE", "AWVALID or AWREADY not asserted during address phase")
         else
             `uvm_info("WRITE", "Address phase handshake PASSED", UVM_LOW)
 
         // Data beat count check
-        if (wr.data.size() != wr.len + 1)
-            `uvm_error("WRITE", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", wr.len + 1, wr.data.size()))
+        if (wr_trans.data.size() != wr_trans.len + 1)
+            `uvm_error("WRITE", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", wr_trans.len + 1, wr_trans.data.size()))
         else
-            `uvm_info("WRITE", $sformatf("Data beat count PASSED: %0d beats", wr.data.size()), UVM_LOW)
+            `uvm_info("WRITE", $sformatf("Data beat count PASSED: %0d beats", wr_trans.data.size()), UVM_LOW)
 
         // WLAST check
-        if (!wr.last)
+        if (!wr_trans.last)
             `uvm_error("WRITE", "WLAST not asserted on final data beat")
         else
             `uvm_info("WRITE", "WLAST asserted correctly", UVM_LOW)
 
         // Write response handshake
-        if (!(wr.bvalid && wr.bready))
+        if (!(wr_trans.bvalid && wr_trans.bready))
             `uvm_error("WRITE", "BVALID or BREADY not asserted during response phase")
         else
             `uvm_info("WRITE", "Write response handshake PASSED", UVM_LOW)
@@ -547,32 +547,32 @@ function void check_write_operation();
 endfunction
 
 function void check_read_operation();
-    axi_trans_t rd;
+    axi_trans_t rd_trans;
 
     while (rd_queue.size() > 0) begin
-        rd = rd_queue.pop_front();
+        rd_trans = rd_queue.pop_front();
 
         // Address phase handshake
-        if (!(rd.valid && rd.ready))
+        if (!(rd_trans.valid && rd_trans.ready))
             `uvm_error("READ", "ARVALID or ARREADY not asserted during address phase")
         else
             `uvm_info("READ", "Address phase handshake PASSED", UVM_LOW)
 
         // Data beat count check
-        if (rd.data.size() != rd.len + 1)
-            `uvm_error("READ", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", rd.len + 1, rd.data.size()))
+        if (rd_trans.data.size() != rd_trans.len + 1)
+            `uvm_error("READ", $sformatf("Data count mismatch: Expected=%0d, Got=%0d", rd_trans_trans.len + 1, rd_trans.data.size()))
         else
-            `uvm_info("READ", $sformatf("Data beat count PASSED: %0d beats", rd.data.size()), UVM_LOW)
+            `uvm_info("READ", $sformatf("Data beat count PASSED: %0d beats", rd_trans.data.size()), UVM_LOW)
 
         // RLAST check
-        if (!rd.last)
+        if (!rd_trans.last)
             `uvm_error("READ", "RLAST not asserted on final read beat")
         else
             `uvm_info("READ", "RLAST asserted correctly", UVM_LOW)
 
         // RRESP check
-        if (rd.resp != 2'b00)
-            `uvm_error("READ", $sformatf("Read response error: RRESP=0x%0h", rd.resp))
+        if (rd_trans.resp != 2'b00)
+            `uvm_error("READ", $sformatf("Read response error: RRESP=0x%0h", rd_trans.resp))
         else
             `uvm_info("READ", "Read response (RRESP) indicates OKAY", UVM_LOW)
     end
