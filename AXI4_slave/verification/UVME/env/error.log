@@ -1,0 +1,170 @@
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+file: ./../UVME/uvm_pkg/test_pkg.sv
+    uvm_analysis_imp_wr#(axi_seq_item, axi_scoreboard) wr_export;
+                      |
+ncvlog: *E,EXPENC (./../UVME/env/axi_scoreboard.sv,607|22): Expecting the keyword 'endclass'.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 607, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+    function new(string name = "axi_scoreboard", uvm_component parent);
+               |
+ncvlog: *E,NEWOIC (./../UVME/env/axi_scoreboard.sv,610|15): The class constructor method 'new' is only allowed within a class declaration.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 610, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        super.new(name, parent);
+            |
+ncvlog: *E,CLSSPX (./../UVME/env/axi_scoreboard.sv,611|12): 'super' can only be used within a class scope that derives from a base class.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 611, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,622|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 622, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,622|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 622, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                        |
+ncvlog: *E,ILLPDL (./../UVME/env/axi_scoreboard.sv,622|24): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 622, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        trans.addr   = t.AWADDR;
+            |
+ncvlog: *E,EXPRPA (./../UVME/env/axi_scoreboard.sv,624|12): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 624, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,661|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 661, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,661|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 661, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t trans;
+                        |
+ncvlog: *E,ILLPDL (./../UVME/env/axi_scoreboard.sv,661|24): Mixing of ansi & non-ansi style port declaration is not legal.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 661, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        trans.addr   = t.ARADDR;
+            |
+ncvlog: *E,EXPRPA (./../UVME/env/axi_scoreboard.sv,663|12): expecting a right parenthesis (')') [A.2.6(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 663, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                |
+ncvlog: *E,MISEXX (./../UVME/env/axi_scoreboard.sv,696|32): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 696, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                |
+ncvlog: *E,MISEXX (./../UVME/env/axi_scoreboard.sv,697|32): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 697, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans, rd_trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,711|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 711, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans, rd_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,711|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 711, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,712|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 712, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,712|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 712, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,712|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 712, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,713|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 713, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,713|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 713, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,713|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 713, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                    bit all_match = 1;
+                                  |
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,749|34): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 749, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,801|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 801, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,801|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 801, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,801|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 801, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,802|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 802, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,802|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 802, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,802|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 802, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans, rd_trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,803|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 803, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans, rd_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,803|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 803, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,848|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 848, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,848|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 848, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_queue_copy[$] = wr_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,848|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 848, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,849|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 849, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t wr_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,849|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 849, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,885|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 885, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                   |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,885|35): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 885, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_queue_copy[$] = rd_queue;
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,885|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 885, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_trans;
+                  |
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,886|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 886, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,886|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 886, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+endclass
+       |
+ncvlog: *E,EXPENP (./../UVME/env/axi_scoreboard.sv,921|7): Expecting the keyword 'endpackage' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 921, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+	package worklib.test_pkg:sv
+		errors: 40, warnings: 1
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+[vv2trainee39@compute-srv2 SIM]$ 
