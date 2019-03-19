@@ -284,7 +284,7 @@ endclass */
 class axi_scoreboard extends uvm_scoreboard;
     `uvm_component_utils(axi_scoreboard)
 
-    typedef struct {
+     typedef struct {
         bit [31:0] addr;
         bit [31:0] data[$];
         bit [3:0]  id;
@@ -479,6 +479,14 @@ class axi_scoreboard extends uvm_scoreboard;
 endfunction 
 
 function void check_handshake_phase();
+
+super.check_phase(phase);
+
+    // Call all checkers
+    check_handshake_phase();
+    check_write_operation();
+    check_read_operation();
+
    axi_trans_t wr, rd;
 
     while (wr_queue.size() > 0 && rd_queue.size() > 0) begin
