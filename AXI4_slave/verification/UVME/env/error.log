@@ -1,63 +1,58 @@
-ncelab: *W,CUVWSI (../UVME/top/axi_top.sv,13|21): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,27): burst_length
-
-      ) write_data_dut (
-                     |
-ncelab: *W,CUVWSI (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,90|21): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/2.AXI4_Slave_Write_Data.sv,17): wid
-
-      ) read_data (
-                |
-ncelab: *W,CUVWSI (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,143|16): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/5.AXI4_Slave_Read_Data.sv,19): data_in
-
-	Top level design units:
-		uvm_pkg
-		cdns_uvmapi
-		cdns_assert2uvm_pkg
-		cdns_uvm_pkg
-		test_pkg
-		axi_top
-ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-            if (i < t.RDATA.size()) begin
-                               |
-ncelab: *E,CUVUNF (../UVME/env/axi_scoreboard.sv,689|31): Hierarchical name component lookup failed at 'size'.
-irun: *E,ELBERR: Error during elaboration (status 1), exiting.
-[vv2trainee39@compute-srv2 SIM]$ clear
 
 [vv2trainee39@compute-srv2 SIM]$ irun -access +rwc -f compile_list.f -uvmhome CDNS-1.1d +UVM_TESTNAME=axi_multiple_outstanding_address_test
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
 Recompiling... reason: file '../UVME/env/axi_scoreboard.sv' is newer than expected.
-	expected: Tue Mar 19 05:25:08 2019
-	actual:   Wed Mar 20 00:05:25 2019
+	expected: Wed Mar 20 00:20:09 2019
+	actual:   Wed Mar 20 00:41:45 2019
 Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
-		Caching library 'worklib' ....... Done
-	Elaborating the design hierarchy:
-    axi4_slave_top dut(
-                     |
-ncelab: *W,CUVWSI (../UVME/top/axi_top.sv,13|21): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,27): burst_length
-
-      ) write_data_dut (
-                     |
-ncelab: *W,CUVWSI (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,90|21): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/2.AXI4_Slave_Write_Data.sv,17): wid
-
-      ) read_data (
+file: ./../UVME/uvm_pkg/test_pkg.sv
+                    failed_handshakes++;
+                                       |
+ncvlog: *E,BADCON (./../UVME/env/axi_scoreboard.sv,906|39): illegal concatenation syntax [4.1.14(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 906, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                }
                 |
-ncelab: *W,CUVWSI (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/axi4_Slave_top.sv,143|16): 1 input port was not connected:
-ncelab: (/home/vv2trainee39/Desktop/Prajwal/AXI4_slave/axi_top_rtl/AXI4_SLAVE_WITH_TOP/5.AXI4_Slave_Read_Data.sv,19): data_in
-
-	Top level design units:
-		uvm_pkg
-		cdns_uvmapi
-		cdns_assert2uvm_pkg
-		cdns_uvm_pkg
-		test_pkg
-		axi_top
-ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
-            if (i < t.RDATA.size()) begin
-                               |
-ncelab: *E,CUVUNF (../UVME/env/axi_scoreboard.sv,689|31): Hierarchical name component lookup failed at 'size'.
-irun: *E,ELBERR: Error during elaboration (status 1), exiting.
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,910|16): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 910, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                    failed_handshakes++;
+                                       |
+ncvlog: *E,BADCON (./../UVME/env/axi_scoreboard.sv,922|39): illegal concatenation syntax [4.1.14(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 922, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                }
+                |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,926|16): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 926, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                    failed_handshakes++;
+                                       |
+ncvlog: *E,BADCON (./../UVME/env/axi_scoreboard.sv,944|39): illegal concatenation syntax [4.1.14(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 944, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                }
+                |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,948|16): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 948, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        else begin
+           |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,954|11): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 954, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+    endfunction
+              |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,958|14): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 958, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+            else
+               |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,978|15): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 978, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+    endfunction
+              |
+ncvlog: *E,MISMUL (./../UVME/env/axi_scoreboard.sv,1010|14): Missing "begin" in [SystemVerilog] task/function.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1010, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+	package worklib.test_pkg:sv
+		errors: 10, warnings: 0
+file: ./../UVME/top/axi_top.sv
+	module worklib.axi_top:sv
+		errors: 0, warnings: 0
+file: ./../UVME/top/axi_interface.sv
+	interface worklib.axi_interface:sv
+		errors: 0, warnings: 0
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
 
