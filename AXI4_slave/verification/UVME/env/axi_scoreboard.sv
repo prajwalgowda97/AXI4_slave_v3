@@ -1083,15 +1083,14 @@ class axi_scoreboard extends uvm_scoreboard;
     if (handshake_queue.size() > 0)
         avg_time = total_time / handshake_queue.size();
         
-    // Calculate average interval between handshakes
-    time avg_interval = 0;
-    if (time_between_handshakes.size() > 0) begin
-        time total_interval = 0;
-        foreach (time_between_handshakes[i])
-            total_interval += time_between_handshakes[i];
-        avg_interval = total_interval / time_between_handshakes.size();
-    end
-    
+// Calculate average interval between handshakes
+time total_interval = 0;
+time avg_interval = 0;
+if (time_between_handshakes.size() > 0) begin
+    foreach (time_between_handshakes[i])
+        total_interval += time_between_handshakes[i];
+    avg_interval = total_interval / time_between_handshakes.size();
+end    
     // Report handshake statistics
     `uvm_info("HANDSHAKE_CHECKER", $sformatf(
         "Handshake Statistics:\n  Total: %0d\n  Write: %0d\n  Read: %0d\n  First: %0t\n  Last: %0t\n  Avg Time: %0t\n  Avg Interval: %0t", 
