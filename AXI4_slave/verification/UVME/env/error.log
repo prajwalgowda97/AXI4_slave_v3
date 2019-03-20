@@ -1,142 +1,137 @@
-Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
-file: ./../UVME/uvm_pkg/test_pkg.sv
-    time avg_interval = 0;
-       |
-ncvlog: *E,BADDCL (./../UVME/env/axi_scoreboard.sv,1087|7): identify declaration while expecting a statement.
+ncvlog: *E,BADDCL (./../UVME/env/axi_scoreboard.sv,1087|3): identify declaration while expecting a statement.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1087, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-    if (time_between_handshakes.size() > 0) begin
-     |
-ncvlog: *E,NOGENV (./../UVME/env/axi_scoreboard.sv,1088|5): Generate constructs are not valid inside classes.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1088, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        foreach (time_between_handshakes[i])
-              |
-ncvlog: *E,EXPEND (./../UVME/env/axi_scoreboard.sv,1090|14): Expecting the keyword 'end' [12.1.3(IEEE 2001)].
+if (time_between_handshakes.size() > 0) begin
+ |
+ncvlog: *E,NOGENV (./../UVME/env/axi_scoreboard.sv,1089|1): Generate constructs are not valid inside classes.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1089, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+    foreach (time_between_handshakes[i])
+          |
+ncvlog: *E,EXPEND (./../UVME/env/axi_scoreboard.sv,1090|10): Expecting the keyword 'end' [12.1.3(IEEE 2001)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1090, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-            total_interval += time_between_handshakes[i];
-                            |
-ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|28): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+        total_interval += time_between_handshakes[i];
+                        |
+ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|24): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1091, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-            total_interval += time_between_handshakes[i];
-                                                        |
-ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|56): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+        total_interval += time_between_handshakes[i];
+                                                    |
+ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|52): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1091, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        avg_interval = total_interval / time_between_handshakes.size();
-                   |
-ncvlog: *E,EXPENC (./../UVME/env/axi_scoreboard.sv,1092|19): Expecting the keyword 'endclass'.
+    avg_interval = total_interval / time_between_handshakes.size();
+               |
+ncvlog: *E,EXPENC (./../UVME/env/axi_scoreboard.sv,1092|15): Expecting the keyword 'endclass'.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1092, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         int matched_write_handshakes = 0;
                                      |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1119|37): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1119, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1118|37): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1118, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         int matched_read_handshakes = 0;
                                     |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1120|36): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1120, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1119|36): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1119, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
                 bit found_match = 0;
                                 |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1125|32): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1125, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1124|32): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1124, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
                 bit found_match = 0;
                                 |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1142|32): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1142, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1141|32): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1141, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         axi_trans_t local_wr_queue[$];
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1166|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1166, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_wr_queue[$];
+                                    |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1166|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1166, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_wr_queue[$];
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1166|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1166, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_rd_queue[$];
                   |
 ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1167|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1167, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_wr_queue[$];
+        axi_trans_t local_rd_queue[$];
                                     |
 ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1167|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1167, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_wr_queue[$];
+        axi_trans_t local_rd_queue[$];
                                      |
 ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1167|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1167, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
+        axi_trans_t wr_trans;
                   |
-ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1168|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1168, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
-                                    |
-ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1168|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1168, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
-                                     |
-ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1168|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1168|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1168, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         axi_trans_t wr_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1168|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1168, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_trans;
                   |
 ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1169|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1169, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t wr_trans;
+        axi_trans_t rd_trans;
                   |
 ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1169|18): Interfaces are not allowed within tasks [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1169, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t rd_trans;
-                  |
-ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1170|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1170, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t rd_trans;
-                  |
-ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1170|18): Interfaces are not allowed within tasks [SystemVerilog].
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1170, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
                     bit data_match = 1;
                                    |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1212|35): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1212, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1211|35): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1211, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         axi_trans_t local_wr_queue[$];
+                  |
+ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1286|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1286, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_wr_queue[$];
+                                    |
+ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1286|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1286, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_wr_queue[$];
+                                     |
+ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1286|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1286, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t local_rd_queue[$];
                   |
 ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1287|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1287, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_wr_queue[$];
+        axi_trans_t local_rd_queue[$];
                                     |
 ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1287|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1287, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_wr_queue[$];
+        axi_trans_t local_rd_queue[$];
                                      |
 ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1287|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1287, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
+        axi_trans_t wr_trans;
                   |
-ncvlog: *E,SVNOTY (./../UVME/env/axi_scoreboard.sv,1288|18): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1288, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
-                                    |
-ncvlog: *E,SVPKSN (./../UVME/env/axi_scoreboard.sv,1288|36): The single-bound form of a range is only allowed for array (i.e., unpacked) dimensions.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1288, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t local_rd_queue[$];
-                                     |
-ncvlog: *E,EXPIDN (./../UVME/env/axi_scoreboard.sv,1288|37): expecting an identifier [3.2][3.8][3.9(IEEE)].
+ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1288|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1288, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         axi_trans_t wr_trans;
+                  |
+ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1288|18): Interfaces are not allowed within tasks [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1288, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+        axi_trans_t rd_trans;
                   |
 ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1289|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1289, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t wr_trans;
+        axi_trans_t rd_trans;
                   |
 ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1289|18): Interfaces are not allowed within tasks [SystemVerilog].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1289, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t rd_trans;
-                  |
-ncvlog: *E,NOIPRT (./../UVME/env/axi_scoreboard.sv,1290|18): Unrecognized declaration 'axi_trans_t' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1290, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        axi_trans_t rd_trans;
-                  |
-ncvlog: *E,NOTINF (./../UVME/env/axi_scoreboard.sv,1290|18): Interfaces are not allowed within tasks [SystemVerilog].
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1290, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         int valid_handshakes = 0;
                              |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1291|29): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1291, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1290|29): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1290, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         int failed_handshakes = 0;
                               |
-ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1292|30): Local static variable with initializer requires 'static' keyword.
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1292, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *W,VARIST (./../UVME/env/axi_scoreboard.sv,1291|30): Local static variable with initializer requires 'static' keyword.
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1291, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
 endclass            
        |
-ncvlog: *E,EXPENP (./../UVME/env/axi_scoreboard.sv,1488|7): Expecting the keyword 'endpackage' [SystemVerilog].
-(`include file: ./../UVME/env/axi_scoreboard.sv line 1488, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+ncvlog: *E,EXPENP (./../UVME/env/axi_scoreboard.sv,1487|7): Expecting the keyword 'endpackage' [SystemVerilog].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1487, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
 	package worklib.test_pkg:sv
 		errors: 27, warnings: 7
 irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
-
