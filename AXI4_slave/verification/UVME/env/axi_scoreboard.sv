@@ -1032,89 +1032,89 @@ class axi_scoreboard extends uvm_scoreboard;
     endfunction 
 
     function void check_collected_handshakes();
-        int write_handshakes = 0;
-        int read_handshakes = 0;
-        time min_time = 0;
-        time max_time = 0;
-        time avg_time = 0;
-        time total_time = 0;
-        time time_between_handshakes[$];
-        
-        if (handshake_queue.size() == 0) begin
-            `uvm_warning("HANDSHAKE_CHECKER", "No handshakes collected from monitor!")
-            return;
-        end
-        
-        `uvm_info("HANDSHAKE_CHECKER", $sformatf("Analyzing %0d handshakes collected from monitor", 
-                                                handshake_queue.size()), UVM_LOW)
-        
-        foreach (handshake_queue[i]) begin
-            if (handshake_queue[i].is_write) begin
-                write_handshakes++;
-                `uvm_info("HANDSHAKE_CHECKER", $sformatf(
-                    "Write handshake[%0d]: ADDR=0x%0h ID=0x%0h Time=%0t", 
-                    i, handshake_queue[i].addr, handshake_queue[i].id, 
-                    handshake_queue[i].timestamp), UVM_HIGH)
-            end else begin
-                read_handshakes++;
-                `uvm_info("HANDSHAKE_CHECKER", $sformatf(
-                    "Read handshake[%0d]: ADDR=0x%0h ID=0x%0h Time=%0t", 
-                    i, handshake_queue[i].addr, handshake_queue[i].id, 
-                    handshake_queue[i].timestamp), UVM_HIGH)
-            end
-            
-            // Track timing statistics
-            if (i == 0) begin
-                min_time = handshake_queue[i].timestamp;
-                max_time = handshake_queue[i].timestamp;
-            end else begin
-                if (handshake_queue[i].timestamp < min_time)
-                    min_time = handshake_queue[i].timestamp;
-                if (handshake_queue[i].timestamp > max_time)
-                    max_time = handshake_queue[i].timestamp;
-                    
-                // Calculate time between consecutive handshakes
-                time_between_handshakes.push_back(handshake_queue[i].timestamp - 
-                                                 handshake_queue[i-1].timestamp);
-            end
-            total_time += handshake_queue[i].timestamp;
-        end
-        
-        if (handshake_queue.size() > 0)
-            avg_time = total_time / handshake_queue.size();
-            
-        // Calculate average interval between handshakes
-        time avg_interval = 0;
-        if (time_between_handshakes.size() > 0) begin
-            time total_interval = 0;
-            foreach (time_between_handshakes[i])
-                total_interval += time_between_handshakes[i];
-            avg_interval = total_interval / time_between_handshakes.size();
-        end
-        
-        // Report handshake statistics
-        `uvm_info("HANDSHAKE_CHECKER", $sformatf(
-            "Handshake Statistics:\n  Total: %0d\n  Write: %0d\n  Read: %0d\n  First: %0t\n  Last: %0t\n  Avg Time: %0t\n  Avg Interval: %0t", 
-            handshake_queue.size(), write_handshakes, read_handshakes, 
-            min_time, max_time, avg_time, avg_interval), UVM_LOW)
-        
-        // Compare with transaction counts
-        if (write_handshakes != wr_queue.size()) begin
-            `uvm_warning("HANDSHAKE_CHECKER", $sformatf(
-                "Write handshake count (%0d) doesn't match write transaction count (%0d)", 
-                write_handshakes, wr_queue.size()))
-        end
-        
-        if (read_handshakes != rd_queue.size()) begin
-            `uvm_warning("HANDSHAKE_CHECKER", $sformatf(
-                "Read handshake count (%0d) doesn't match read transaction count (%0d)", 
-                read_handshakes, rd_queue.size()))
-        end
-        
-        // Check for address/ID correlations between handshakes and transactions
-        check_handshake_transaction_correlation();
-    endfunction
+    int write_handshakes = 0;
+    int read_handshakes = 0;
+    time min_time = 0;
+    time max_time = 0;
+    time avg_time = 0;
+    time total_time = 0;
+    time time_between_handshakes[$];
     
+    if (handshake_queue.size() == 0) begin
+        `uvm_warning("HANDSHAKE_CHECKER", "No handshakes collected from monitor!")
+        return;
+    end
+    
+    `uvm_info("HANDSHAKE_CHECKER", $sformatf("Analyzing %0d handshakes collected from monitor", 
+                                            handshake_queue.size()), UVM_LOW)
+    
+    foreach (handshake_queue[i]) begin
+        if (handshake_queue[i].is_write) begin
+            write_handshakes++;
+            `uvm_info("HANDSHAKE_CHECKER", $sformatf(
+                "Write handshake[%0d]: ADDR=0x%0h ID=0x%0h Time=%0t", 
+                i, handshake_queue[i].addr, handshake_queue[i].id, 
+                handshake_queue[i].timestamp), UVM_HIGH)
+        end else begin
+            read_handshakes++;
+            `uvm_info("HANDSHAKE_CHECKER", $sformatf(
+                "Read handshake[%0d]: ADDR=0x%0h ID=0x%0h Time=%0t", 
+                i, handshake_queue[i].addr, handshake_queue[i].id, 
+                handshake_queue[i].timestamp), UVM_HIGH)
+        end
+        
+        // Track timing statistics
+        if (i == 0) begin
+            min_time = handshake_queue[i].timestamp;
+            max_time = handshake_queue[i].timestamp;
+        end else begin
+            if (handshake_queue[i].timestamp < min_time)
+                min_time = handshake_queue[i].timestamp;
+            if (handshake_queue[i].timestamp > max_time)
+                max_time = handshake_queue[i].timestamp;
+                
+            // Calculate time between consecutive handshakes
+            time_between_handshakes.push_back(handshake_queue[i].timestamp - 
+                                             handshake_queue[i-1].timestamp);
+        end
+        total_time += handshake_queue[i].timestamp;
+    end
+    
+    if (handshake_queue.size() > 0)
+        avg_time = total_time / handshake_queue.size();
+        
+    // Calculate average interval between handshakes
+    time avg_interval = 0;
+    if (time_between_handshakes.size() > 0) begin
+        time total_interval = 0;
+        foreach (time_between_handshakes[i])
+            total_interval += time_between_handshakes[i];
+        avg_interval = total_interval / time_between_handshakes.size();
+    end
+    
+    // Report handshake statistics
+    `uvm_info("HANDSHAKE_CHECKER", $sformatf(
+        "Handshake Statistics:\n  Total: %0d\n  Write: %0d\n  Read: %0d\n  First: %0t\n  Last: %0t\n  Avg Time: %0t\n  Avg Interval: %0t", 
+        handshake_queue.size(), write_handshakes, read_handshakes, 
+        min_time, max_time, avg_time, avg_interval), UVM_LOW)
+    
+    // Compare with transaction counts
+    if (write_handshakes != wr_queue.size()) begin
+        `uvm_warning("HANDSHAKE_CHECKER", $sformatf(
+            "Write handshake count (%0d) doesn't match write transaction count (%0d)", 
+            write_handshakes, wr_queue.size()))
+    end
+    
+    if (read_handshakes != rd_queue.size()) begin
+        `uvm_warning("HANDSHAKE_CHECKER", $sformatf(
+            "Read handshake count (%0d) doesn't match read transaction count (%0d)", 
+            read_handshakes, rd_queue.size()))
+    end
+    
+    // Check for address/ID correlations between handshakes and transactions
+    check_handshake_transaction_correlation();
+endfunction
+
     function void check_handshake_transaction_correlation();
         int matched_write_handshakes = 0;
         int matched_read_handshakes = 0;
