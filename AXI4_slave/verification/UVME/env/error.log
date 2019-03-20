@@ -1,24 +1,28 @@
-ncvlog: *E,BADDCL (./../UVME/env/axi_scoreboard.sv,1087|11): identify declaration while expecting a statement.
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d
+file: ./../UVME/uvm_pkg/test_pkg.sv
+    time avg_interval = 0;
+       |
+ncvlog: *E,BADDCL (./../UVME/env/axi_scoreboard.sv,1087|7): identify declaration while expecting a statement.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1087, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-        if (time_between_handshakes.size() > 0) begin
-         |
-ncvlog: *E,NOGENV (./../UVME/env/axi_scoreboard.sv,1088|9): Generate constructs are not valid inside classes.
+    if (time_between_handshakes.size() > 0) begin
+     |
+ncvlog: *E,NOGENV (./../UVME/env/axi_scoreboard.sv,1088|5): Generate constructs are not valid inside classes.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1088, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-            foreach (time_between_handshakes[i])
-                  |
-ncvlog: *E,EXPEND (./../UVME/env/axi_scoreboard.sv,1090|18): Expecting the keyword 'end' [12.1.3(IEEE 2001)].
+        foreach (time_between_handshakes[i])
+              |
+ncvlog: *E,EXPEND (./../UVME/env/axi_scoreboard.sv,1090|14): Expecting the keyword 'end' [12.1.3(IEEE 2001)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1090, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-                total_interval += time_between_handshakes[i];
-                                |
-ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|32): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+            total_interval += time_between_handshakes[i];
+                            |
+ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|28): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1091, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-                total_interval += time_between_handshakes[i];
-                                                            |
-ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|60): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
+            total_interval += time_between_handshakes[i];
+                                                        |
+ncvlog: *E,EXPLPA (./../UVME/env/axi_scoreboard.sv,1091|56): expecting a left parenthesis ('(') [12.1.2][7.1(IEEE)].
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1091, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
-            avg_interval = total_interval / time_between_handshakes.size();
-                       |
-ncvlog: *E,EXPENC (./../UVME/env/axi_scoreboard.sv,1092|23): Expecting the keyword 'endclass'.
+        avg_interval = total_interval / time_between_handshakes.size();
+                   |
+ncvlog: *E,EXPENC (./../UVME/env/axi_scoreboard.sv,1092|19): Expecting the keyword 'endclass'.
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1092, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
         int matched_write_handshakes = 0;
                                      |
@@ -134,11 +138,5 @@ ncvlog: *E,EXPENP (./../UVME/env/axi_scoreboard.sv,1488|7): Expecting the keywor
 (`include file: ./../UVME/env/axi_scoreboard.sv line 1488, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
 	package worklib.test_pkg:sv
 		errors: 27, warnings: 7
-file: ./../UVME/top/axi_top.sv
-	module worklib.axi_top:sv
-		errors: 0, warnings: 0
-file: ./../UVME/top/axi_interface.sv
-	interface worklib.axi_interface:sv
-		errors: 0, warnings: 0
 irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
 
