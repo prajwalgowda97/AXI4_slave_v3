@@ -1,4 +1,325 @@
-ncelab: *E,CUVUNF (../UVME/env/axi_scoreboard.sv,777|31): Hierarchical name component lookup failed at 'size'.
-irun: *E,ELBERR: Error during elaboration (status 1), exiting.
 
+ncvlog: *E,ILLPRI (./../UVME/env/axi_scoreboard.sv,875|30): illegal expression primary [4.2(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 875, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                    }
+                    |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,888|20): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 888, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+                end else begin
+                       |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,892|23): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 892, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+            end else begin
+                   |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,923|19): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 923, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+            }
+            |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,1148|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1148, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+    endfunction
+              |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_scoreboard.sv,1169|14): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_scoreboard.sv line 1169, file: ./../UVME/uvm_pkg/test_pkg.sv line 22)
+  `uvm_component_utils(axi_env)
+                              |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,4|30): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/env/axi_env.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  `uvm_component_utils(axi_env)
+                              |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,4|30): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/env/axi_env.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  `uvm_component_utils(axi_env)
+                              |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,4|30): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/env/axi_env.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,15|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_env.sv line 15, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,26|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_env.sv line 26, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  endfunction 
+            |
+ncvlog: *E,NOTSTT (./../UVME/env/axi_env.sv,35|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/env/axi_env.sv line 35, file: ./../UVME/uvm_pkg/test_pkg.sv line 23)
+  `uvm_component_utils(axi_base_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_base_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  `uvm_component_utils(axi_base_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_base_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  `uvm_component_utils(axi_base_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_base_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  endfunction 
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,14|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_base_test.sv line 14, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,22|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_base_test.sv line 22, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+	endfunction
+	          |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,27|11): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_base_test.sv line 27, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  endtask
+        |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_base_test.sv,34|8): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_base_test.sv line 34, file: ./../UVME/uvm_pkg/test_pkg.sv line 24)
+  `uvm_component_utils(axi_reset_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_reset_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  `uvm_component_utils(axi_reset_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_reset_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  `uvm_component_utils(axi_reset_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_reset_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_reset_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_reset_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  endtask
+        |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_reset_test.sv,52|8): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_reset_test.sv line 52, file: ./../UVME/uvm_pkg/test_pkg.sv line 25)
+  `uvm_component_utils(axi_handshake_test)
+                                         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,4|41): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_handshake_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  `uvm_component_utils(axi_handshake_test)
+                                         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,4|41): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_handshake_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  `uvm_component_utils(axi_handshake_test)
+                                         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,4|41): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_handshake_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_handshake_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_handshake_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  endtask
+        |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_handshake_test.sv,52|8): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_handshake_test.sv line 52, file: ./../UVME/uvm_pkg/test_pkg.sv line 26)
+  `uvm_component_utils(axi_write_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_write_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+  `uvm_component_utils(axi_write_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_write_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+  `uvm_component_utils(axi_write_test)
+                                     |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,4|37): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_write_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_write_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_write_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_write_test.sv,40|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_write_test.sv line 40, file: ./../UVME/uvm_pkg/test_pkg.sv line 27)
+  `uvm_component_utils(axi_read_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_read_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+  `uvm_component_utils(axi_read_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_read_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+  `uvm_component_utils(axi_read_test)
+                                    |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,4|36): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_read_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_read_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_read_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_read_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_read_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 28)
+  `uvm_component_utils(axi_concurrent_wr_rd_test)
+                                                |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,4|48): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+  `uvm_component_utils(axi_concurrent_wr_rd_test)
+                                                |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,4|48): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+  `uvm_component_utils(axi_concurrent_wr_rd_test)
+                                                |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,4|48): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_concurrent_wr_rd_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_concurrent_wr_rd_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 29)
+  `uvm_component_utils(axi_random_wr_rd_test)
+                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,4|44): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_random_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+  `uvm_component_utils(axi_random_wr_rd_test)
+                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,4|44): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_random_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+  `uvm_component_utils(axi_random_wr_rd_test)
+                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,4|44): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_random_wr_rd_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_random_wr_rd_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_random_wr_rd_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_random_wr_rd_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_random_wr_rd_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 30)
+  `uvm_component_utils(axi_fixed_burst_test)
+                                           |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,4|43): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_fixed_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+  `uvm_component_utils(axi_fixed_burst_test)
+                                           |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,4|43): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_fixed_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+  `uvm_component_utils(axi_fixed_burst_test)
+                                           |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,4|43): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_fixed_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_fixed_burst_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_fixed_burst_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_fixed_burst_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_fixed_burst_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 31)
+  `uvm_component_utils(axi_increment_burst_test)
+                                               |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,4|47): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_increment_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+  `uvm_component_utils(axi_increment_burst_test)
+                                               |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,4|47): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_increment_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+  `uvm_component_utils(axi_increment_burst_test)
+                                               |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,4|47): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_increment_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_increment_burst_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_increment_burst_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_increment_burst_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_increment_burst_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 32)
+  `uvm_component_utils(axi_wrapped_burst_test)
+                                             |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,4|45): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_wrapped_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+  `uvm_component_utils(axi_wrapped_burst_test)
+                                             |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,4|45): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_wrapped_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+  `uvm_component_utils(axi_wrapped_burst_test)
+                                             |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,4|45): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_wrapped_burst_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_wrapped_burst_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_wrapped_burst_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_wrapped_burst_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_wrapped_burst_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 33)
+  `uvm_component_utils(axi_multiple_outstanding_address_test)
+                                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,4|60): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+  `uvm_component_utils(axi_multiple_outstanding_address_test)
+                                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,4|60): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_component_registry_internal [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 467], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+  `uvm_component_utils(axi_multiple_outstanding_address_test)
+                                                            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,4|60): expecting a statement [9(IEEE)].
+(`define macro: m_uvm_get_type_name_func [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 427], `define macro: uvm_component_utils [/tools/cadence/INCISIVE152/tools/methodology/UVM/CDNS-1.1d/sv/src/macros/uvm_object_defines.svh line 330], `include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 4, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,11|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 11, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+  endfunction
+            |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,16|12): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 16, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+   endtask
+         |
+ncvlog: *E,NOTSTT (./../UVME/test/axi_multiple_outstanding_address_test.sv,48|9): expecting a statement [9(IEEE)].
+(`include file: ./../UVME/test/axi_multiple_outstanding_address_test.sv line 48, file: ./../UVME/uvm_pkg/test_pkg.sv line 34)
+	package worklib.test_pkg:sv
+		errors: 79, warnings: 0
+file: ./../UVME/top/axi_top.sv
+	module worklib.axi_top:sv
+		errors: 0, warnings: 0
+file: ./../UVME/top/axi_interface.sv
+	interface worklib.axi_interface:sv
+		errors: 0, warnings: 0
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
 
